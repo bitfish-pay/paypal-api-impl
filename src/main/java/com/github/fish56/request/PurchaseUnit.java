@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class PurchaseUnitRequest {
+public class PurchaseUnit {
     /**
      * The API caller-provided external ID for the
      * purchase unit. Required for multiple purchase units

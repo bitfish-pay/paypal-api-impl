@@ -8,8 +8,7 @@ import lombok.experimental.Accessors;
 public class OrderRequest {
     private IntentEnum intent = IntentEnum.CAPTURE;
 
-    private PurchaseUnitRequest[] purchase_units;
-
+    private PurchaseUnit[] purchase_units;
 
     public enum IntentEnum{
         /**
