@@ -49,4 +49,17 @@ public class OrderTest extends ApplicationTest {
         OrderResponse response = JSONObject.parseObject(res, OrderResponse.class);
         System.out.println(JSONObject.toJSONString(response.getPurchase_units()[0]));
     }
+
+    @Test
+    public void getOrderInfo2() throws Exception{
+        String url = baseUrl + "/v2/checkout/orders/" + orderId;
+        String res = Unirest.get(url)
+                .basicAuth(clientId, clientSecret)
+                .header("Content-Type", "application/json")
+                .asString().getBody();
+        System.out.println(res);
+
+        OrderResponse response = JSONObject.parseObject(res, OrderResponse.class);
+        System.out.println(JSONObject.toJSONString(response.getPurchase_units()[0]));
+    }
 }
